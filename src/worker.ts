@@ -2,10 +2,12 @@
 // listed in run_worker_first (wrangler.jsonc):
 //   /              and /teams/   filtered / sorted / paged salary directories (src/directory.ts), WordPress search (?s=)
 //   /wp-json/*     the header live search (/wp-json/wp/v2/search), same JSON shape as the WordPress REST API
+//   /?s=, /page/N/?s=, /search/term/   WordPress search results page (src/search.ts)
 //   /api/forms     contact form (src/forms.ts); /wp-admin/admin-ajax.php is routed there too
 import { directoryMode, rewriteDirectory } from './directory';
 import data from './data/directory.json';
 import { handleForm, type FormEnv } from './forms';
+import { searchRequest, renderSearch } from './search';
 
 interface Env extends FormEnv { SITE_URL: string }
 
@@ -40,6 +42,10 @@ export default {
     if (url.pathname === '/wp-json/wp/v2/search') return liveSearch(url);
     if (url.pathname.startsWith('/wp-json/')) return new Response('[]', { status: 404, headers: { 'content-type': 'application/json' } });
     if (url.pathname.startsWith('/wp-admin/')) return Response.json({ success: true, data: {} });
+
+    const search = request.method === 'GET' ? searchRequest(url) : null;
+    if (search) return renderSearch(env.ASSETS, url, search.term, search.page);
+    if (url.pathname === '/search/') return Response.redirect(new URL('/', url).href, 302);
 
     const mode = directoryMode(url);
     if (mode && request.method === 'GET') {

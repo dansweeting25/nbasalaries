@@ -2,14 +2,15 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "nbasalaries",
   // Most requests are served straight from the static assets. The Worker (src/worker.ts) runs first only for:
-  // the two directory pages (query-string filters/sort/paging), the live search API, the contact form.
+  // the two directory pages (query-string filters/sort/paging), search (/?s=, /page/N/?s=, /search/…),
+  // the live search API, the contact form.
   "main": "./src/worker.ts",
   "compatibility_date": "2026-11-06",
   "assets": {
     "directory": "./dist",
     "binding": "ASSETS",
     "not_found_handling": "404-page",
-    "run_worker_first": ["/", "/teams/", "/wp-json/*", "/wp-admin/*", "/api/*"]
+    "run_worker_first": ["/", "/teams/", "/page/*", "/search/*", "/wp-json/*", "/wp-admin/*", "/api/*"]
   },
   "observability": { "enabled": true },
   // Contact form submissions (schema in migrations/).

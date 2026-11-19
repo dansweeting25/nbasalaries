@@ -39,12 +39,16 @@ const cfDecode = (h) => { const k = parseInt(h.slice(0, 2), 16); let s = ''; for
 const KEEP_ABSOLUTE = 'link[rel="canonical"], meta[property^="og:"], meta[name^="twitter:"], link[rel="alternate"][hreflang]';
 
 function clean(html) {
+  // Site-specific fixes first, so they also reach blocks that EXTERNALIZE moves into shared files.
+  for (const [a, b] of PATCHES) html = html.split(a).join(b);
   const $ = cheerio.load(html);
   // WordPress plumbing that has no meaning without WordPress
   $('link[rel="https://api.w.org/"], link[rel="EditURI"], link[rel="shortlink"], link[rel="alternate"][type="application/json"], link[rel="alternate"][type="application/json+oembed"], link[rel="alternate"][type="text/xml+oembed"], link[rel="pingback"]').remove();
   $('meta[name="generator"]').remove();
   $('script#breeze-prefetch-js, script#breeze-prefetch-js-extra, script#wp-emoji-settings, style#wp-emoji-styles-inline-css').remove();
   $('script[src*="email-decode.min.js"]').remove();
+  // Cloudflare Web Analytics beacon: Cloudflare injects it at the edge on proxied zones, so a copy would load twice.
+  $('script[src*="static.cloudflareinsights.com/beacon"]').remove();
   $('script[type="module"]').each((_, el) => { if (/wp-emoji|emoji-settings/.test($(el).html() || '')) $(el).remove(); });
   // Cloudflare email obfuscation (re-applied by Cloudflare at the edge if the zone has it on)
   $('a[href^="/cdn-cgi/l/email-protection"]').each((_, el) => { const h = ($(el).attr('href') || '').split('#')[1]; if (h) $(el).attr('href', 'mailto:' + cfDecode(h)); });
@@ -142,12 +146,7 @@ for (const p of pages) {
       extCount++;
     }
   }
-  let full = $.html();
-  if (PATCHES.length) {
-    for (const [a, b] of PATCHES) full = full.split(a).join(b);
-    const $p = cheerio.load(full);
-    $.root().empty().append($p.root().children());
-  }
+  const full = $.html();
   collect(full);
   await w(`scripts/port-snapshot/${snapName(p)}.html`, full);
   $('a[href]').each((_, el) => { const c = (el.attribs.class || '').split(/\s+/); if (c.some((x) => ACTIVE_CLASSES.includes(x)) || el.attribs['aria-current']) activeHrefs.add(linkKey(el)); });
