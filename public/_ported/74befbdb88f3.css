@@ -1,0 +1,12 @@
+
+/* V30: hero hierarchy, touch feedback and consistent navigation. */
+#overview .bde-fancy-container-506-131{display:flex!important;flex-direction:column!important;gap:8px!important;align-items:flex-start!important}
+#overview .bde-shortcode-506-180{margin-top:auto!important}#overview .bde-shortcode-506-181{margin-top:0!important}#overview .nf-identity{margin:0!important;line-height:1.4!important}#overview .nf-identity span+span:before{margin:0 9px!important}
+@media(min-width:1024px){#overview .bde-fancy-container-506-131{min-height:316px!important}#nba-site-header .bde-button-365-108 .button-atom{font-size:20px!important}}
+.nba-fin .nf-carousel .nf-carousel-controls button,.nba-fin .nf-carousel .nf-carousel-cta>span:last-child,.nba-fin .nf-player-card [data-player-more]>span:last-child,#nba-site-header .nba-team-picker .nba-team-next{font-size:0!important}
+.nba-fin .nf-carousel .nf-carousel-controls button:disabled{background:color-mix(in srgb,var(--nba-team-accent) 48%,white)!important;color:#fff!important}
+.nba-fin .nf-player-card:hover,.nba-fin .nf-player-card:focus-within,.nba-fin .nf-player-card:active{background:color-mix(in srgb,var(--nba-team-accent) 12%,white)!important}
+#nba-site-header .nba-team-picker .nba-team-strip{margin-left:-6px!important;padding-left:0!important}#nba-site-header .nba-team-strip img{width:28px!important;height:28px!important}#nba-site-header .nba-team-strip a{height:36px!important}
+@media(max-width:1023px){#overview .bde-fancy-container-506-131{min-height:165px!important}#nba-site-header .nba-mobile-menu summary,#nba-site-header .nba-team-picker .nba-team-next{color:#343434!important}#nba-site-header .bde-button-365-108 .button-atom,#nba-site-header .nba-mobile-menu summary{font-size:12px!important}#nba-site-header .nba-team-strip img{width:30px!important;height:30px!important}
+.nba-fin .nf-era>summary{grid-template-columns:max-content minmax(0,1fr)!important;column-gap:10px!important}.nba-fin .nf-era>summary .nf-era-years{white-space:nowrap!important;font-size:clamp(10px,3vw,14px)!important}.nba-fin .nf-era>summary .nf-stint-tagline{white-space:nowrap!important;font-size:clamp(10px,3vw,14px)!important}.nba-fin .nf-era>summary .nf-range{grid-column:1/-1;justify-self:end;margin-top:-28px}.nba-fin .nf-era>summary .nf-era-team{min-height:30px}
+}

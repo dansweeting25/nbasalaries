@@ -1,0 +1,10 @@
+
+.nsd-team-groups{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;width:100%}
+.nsd-team-groups h3{font-size:19px;text-transform:none;margin:0 0 15px}
+.nsd-team-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.breakdance .nsd-team-groups .nsd-team-links a{display:flex;align-items:center;gap:12px;min-width:0;min-height:70px;padding:12px 14px;border:1px solid color-mix(in srgb,var(--nsd-team) 16%,white);border-radius:8px;background:repeating-linear-gradient(125deg,color-mix(in srgb,var(--nsd-team) 7%,white) 0 1px,transparent 1px 8px),#fff;color:var(--nsd-team);text-decoration:none;font-size:13px;font-weight:650;line-height:1.45}
+.breakdance .nsd-team-groups .nsd-team-links a span{color:var(--nsd-team)}
+.breakdance .nsd-team-groups .nsd-team-links a:hover{color:var(--nsd-team);border-color:var(--nsd-team);background-color:#fff}
+.nsd-team-links a:focus-visible{outline:2px solid var(--nsd-team);outline-offset:3px}
+.nsd-team-links img{width:44px;height:44px;flex:0 0 44px;object-fit:contain}
+@media(max-width:600px){.nsd-team-links{gap:8px}.breakdance .nsd-team-groups .nsd-team-links a{gap:8px;padding:10px;min-height:68px;font-size:12px}.nsd-team-links img{width:32px;height:32px;flex-basis:32px}}

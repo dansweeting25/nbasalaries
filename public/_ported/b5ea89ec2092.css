@@ -1,0 +1,33 @@
+
+#nba-site-header .bde-button-365-108{display:none!important}
+#nba-site-header .bde-shortcode:has(>.nba-header-search){display:block!important;width:auto!important;min-width:0!important;flex:0 1 300px}
+#nba-site-header .nba-header-search{position:relative;width:clamp(220px,23vw,300px);font-family:Inter,Arial,sans-serif;color:#343434;text-align:left}
+#nba-site-header .nba-search-toggle{display:none}
+#nba-site-header .nba-search-form{display:flex;align-items:center;height:42px;border:1px solid #d2d2d2;border-radius:7px;background:#f7f7f7;overflow:hidden;margin:0;width:100%}
+#nba-site-header .nba-search-form:focus-within{border-color:#1d428a;box-shadow:0 0 0 2px #1d428a20}
+#nba-site-header .nba-search-form input{display:block;width:100%;min-width:0;height:100%;border:0!important;outline:none!important;box-shadow:none!important;background:transparent;padding:0 12px;color:#172033;font:400 14px/1.4 Inter,Arial,sans-serif}
+#nba-site-header .nba-search-form input::placeholder{color:#63666b;opacity:1}
+#nba-site-header .nba-search-form button{display:flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:40px;margin:0;padding:0;border:0;background:transparent;color:#343434;cursor:pointer}
+#nba-site-header .nba-header-search svg{display:block;width:20px;height:20px;min-width:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#nba-site-header .nba-search-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#nba-site-header .nba-search-results{position:absolute;top:calc(100% + 9px);left:0;right:0;min-width:280px;background:#fff;border:1px solid #dce3ec;border-radius:8px;box-shadow:0 8px 24px #1720331a;max-height:60vh;overflow:auto;z-index:1002;padding:8px}
+#nba-site-header .nba-search-results[hidden]{display:none!important}
+#nba-site-header .nba-search-status{font-size:12px;line-height:1.5;color:#667085;margin:4px 8px 7px}
+#nba-site-header .nba-search-results ul{list-style:none;margin:0;padding:0}
+#nba-site-header .nba-search-results li{margin:0;padding:0}
+#nba-site-header .nba-search-results a{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 9px;border-radius:5px;text-decoration:none;color:#1d428a;font-size:14px;font-weight:600;line-height:1.4}
+#nba-site-header .nba-search-results a:hover,#nba-site-header .nba-search-results a:focus-visible{background:#edf1f8;outline:none}
+#nba-site-header .nba-search-results small{font-size:11px;font-weight:400;color:#667085}
+#nba-site-header .nba-team-picker .nba-team-archive{height:38px!important}
+@media(min-width:768px){#nba-site-header .nba-team-picker .nba-team-next{height:38px!important;width:38px!important;flex-basis:38px!important}#nba-site-header .bde-fancy-container-365-103{flex-wrap:nowrap!important}}
+@media(max-width:767px){
+#nba-site-header .bde-shortcode:has(>.nba-header-search){flex:0 0 38px!important;width:38px!important}
+#nba-site-header .nba-header-search{width:38px}
+#nba-site-header .nba-search-toggle{display:flex;align-items:center;justify-content:center;width:38px;height:38px;border:1px solid #d2d2d2;border-radius:6px;background:#ededed;color:#343434;padding:0;margin:0;cursor:pointer}
+#nba-site-header .nba-search-toggle:focus-visible{outline:2px solid #1d428a;outline-offset:2px}
+#nba-site-header .nba-search-panel{display:none;position:fixed;left:16px;right:16px;top:var(--nba-search-top,75px);padding:12px;background:#fff;border:1px solid #dce3ec;border-radius:8px;box-shadow:0 8px 24px #1720331a;z-index:1003}
+#nba-site-header .nba-header-search.is-open .nba-search-panel{display:block}
+#nba-site-header .nba-search-form input{font-size:16px}
+#nba-site-header .nba-search-results{position:static;min-width:0;border:0;border-radius:0;box-shadow:none;padding:8px 0 0;max-height:55vh}
+#nba-site-header .bde-fancy-container-365-103{gap:8px!important}
+}

@@ -1,0 +1,3 @@
+[
+  ["new URL(root.dataset.endpoint)", "new URL(root.dataset.endpoint,location.href)"]
+]

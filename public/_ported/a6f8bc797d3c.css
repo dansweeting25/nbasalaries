@@ -1,0 +1,131 @@
+/* ===== Global ===== */
+@media (min-width:1024px){
+  .nba-unified-hint{display:none!important}
+}
+/* Team bar: on desktop the "Choose Your Team" button always shows, and the logos shrink to fit
+   before they ever scroll. Mobile keeps its own arrow. Prefixed with the header ID because the
+   header's own rules use it. */
+@media (min-width:768px){
+  html body #nba-site-header .nba-team-picker .nba-team-picker-controls .nba-team-archive,
+  html body #nba-site-header .nba-team-picker .nba-team-picker-controls .nba-team-archive[hidden]{display:inline-flex!important}
+  html body #nba-site-header .nba-team-picker .nba-team-picker-controls .nba-team-next,
+  html body #nba-site-header .nba-team-picker .nba-team-picker-controls .nba-team-next[hidden]{display:none!important}
+  html body #nba-site-header .nba-team-picker .nba-team-strip{flex:1 1 auto!important;min-width:0!important;overflow-x:auto!important;scrollbar-width:none;justify-content:space-between!important;gap:2px!important;margin-left:0!important}
+  html body #nba-site-header .nba-team-picker .nba-team-strip::-webkit-scrollbar{display:none}
+  html body #nba-site-header .nba-team-picker .nba-team-strip>a{flex:1 1 0!important;min-width:24px!important;max-width:40px!important;width:auto!important}
+  html body #nba-site-header .nba-team-picker .nba-team-strip>a img{width:100%!important;max-width:30px!important;height:auto!important}
+}
+/* Footer content spans the page like the header */
+footer.bde-section-371-100>.section-container{max-width:none!important;padding-left:24px!important;padding-right:24px!important}
+footer.bde-section-371-100>.section-container>.bde-fancy-container{max-width:none!important;width:100%!important}
+
+/* ===== Homepage + teams directory ===== */
+.nlf-dir .bde-section-14-108>.section-container,
+.nlf-dir .bde-section-405-107>.section-container{max-width:none!important;padding-left:24px!important;padding-right:24px!important}
+.nlf-dir .bde-fancy-container-14-109,
+.nlf-dir .bde-fancy-container-405-108{gap:24px!important}
+.nlf-dir .bde-fancy-container-14-110,
+.nlf-dir .bde-fancy-container-405-109{flex:1 1 auto!important;min-width:0!important;width:auto!important;max-width:none!important}
+.nlf-dir .bde-fancy-container-14-111,
+.nlf-dir .bde-fancy-container-405-110{flex:0 0 356px!important;width:356px!important;max-width:356px!important}
+.nlf-dir .bde-globalblock-14-112,
+.nlf-dir .bde-globalblock-405-111{position:sticky;top:180px}
+@media (max-width:1023px){
+  .nlf-dir .bde-fancy-container-14-111,
+  .nlf-dir .bde-fancy-container-405-110{display:none!important}
+}
+
+/* Hero pills: mobile only, sized like the player page's mobile hero */
+.nlf-dir .bde-fancy-container-14-113>.bde-fancy-container,
+.nlf-dir .bde-fancy-container-405-112>.bde-fancy-container{display:none!important}
+@media (max-width:1023px){
+  .nlf-dir .bde-fancy-container-14-113>.bde-fancy-container,
+  .nlf-dir .bde-fancy-container-405-112>.bde-fancy-container{display:flex!important;flex-wrap:wrap;gap:8px!important}
+  .nlf-dir .bde-fancy-container-14-113>.bde-fancy-container .button-atom,
+  .nlf-dir .bde-fancy-container-405-112>.bde-fancy-container .button-atom{padding:9px 12px!important;font-size:13px!important;font-weight:600!important;line-height:13px!important;min-height:0!important;border-radius:24px!important}
+}
+
+/* Filters: three per row on desktop */
+@media (min-width:1024px){
+  .nlf-dir .nsd-filters{grid-template-columns:repeat(3,minmax(0,1fr))!important;align-items:end}
+  .nlf-dir .nsd-filters .nsd-filter-actions{align-self:end}
+}
+
+/* Browse by team: buttons only as wide as their label, divisions in masonry columns */
+.nlf-dir .nsd-team-groups{display:block!important;columns:3 300px;column-gap:28px}
+.nlf-dir .nsd-team-groups>section{break-inside:avoid;display:inline-block;width:100%;margin:0 0 26px}
+.nlf-dir .nsd-team-groups>section>h3{margin:0 0 12px!important}
+.nlf-dir .nsd-team-links{display:flex!important;flex-wrap:wrap;gap:10px!important;grid-template-columns:none!important}
+.nlf-dir .nsd-team-links>a{width:auto!important;flex:0 0 auto!important;max-width:100%}
+
+/* FAQs: same look as the team page questions */
+.nlf-dir .bde-frequently-asked-questions{gap:0!important}
+.nlf-dir .bde-faq__item{background:#f3f5f8!important;border:0!important;border-left:3px solid #17408b!important;border-radius:9px!important;margin:0 0 12px!important;overflow:hidden}
+.nlf-dir .bde-faq__question{padding:18px 20px!important;background:transparent!important;border:0!important;font-size:16px!important;font-weight:650!important;color:#172033!important;cursor:pointer;display:flex!important;align-items:center;justify-content:space-between;gap:16px;width:100%;text-align:left}
+.nlf-dir .bde-faq__title{font-size:16px!important;font-weight:650!important;color:#172033!important}
+.nlf-dir .bde-faq__icon svg{width:12px!important;height:12px!important;fill:#17408b!important}
+.nlf-dir .bde-faq__answer{padding:0 20px 18px!important;background:transparent!important;border:0!important;color:#344054}
+.nlf-dir .bde-faq__question:hover{background:#e9edf3!important}
+
+/* Sidebar, built to match the player page rail */
+.nsr-rail{padding:22px;background:#fff;border:1px solid #e1e7ee;border-radius:12px;font-family:Inter,Arial,sans-serif;color:#172033}
+.nsr-rail-title{font-size:18px;font-weight:700;color:#172033;line-height:1.3}
+.nsr-rail nav{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px;margin:16px 0 20px}
+.nsr-rail nav a{font-size:14px;font-weight:600;color:#17408b;text-decoration:underline;text-underline-offset:3px;line-height:1.35}
+.nsr-rail nav a:hover{color:#0f2c63}
+.nsr-btn,.nsr-jump button{display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;min-height:50px;border:0;border-radius:7px;background:#17408b;color:#fff!important;padding:11px 14px;font-size:14px;font-weight:650;font-family:inherit;text-decoration:none!important;cursor:pointer;margin-top:10px}
+.nsr-btn:hover,.nsr-jump button:hover{background:#0f2c63}
+.nsr-btn>span:last-child{margin-left:auto}
+.nsr-jump button{justify-content:center}
+.nsr-rail section{border-top:1px solid #e1e7ee;margin-top:20px;padding-top:20px}
+.nsr-rail h3{font-size:18px!important;font-weight:700!important;margin:0 0 14px!important;color:#172033;line-height:1.3}
+.nsr-jump label{display:block;font-size:13px;font-weight:600;color:#172033}
+.nsr-jump select{display:block;width:100%;margin-top:6px;border:1px solid #ccd5df;border-radius:5px;padding:10px 8px;font:inherit;font-size:14px;background:#fff;color:#172033}
+.nsr-rail .nsr-meta{margin:16px 0 0;font-size:12px;color:#64748b;line-height:1.5}
+
+/* ===== Team page ===== */
+.nlf-team .nst-pills{display:none!important}
+@media (max-width:1023px){
+  .nlf-team .nst-pills{display:flex!important;flex-wrap:wrap;gap:8px!important}
+  .nlf-team .nst-pills a{padding:9px 12px!important;font-size:13px!important;font-weight:600!important;line-height:13px!important;border-radius:24px!important}
+}
+/* Dropdowns only as wide as their label */
+.nlf-team .nst-component-roster>details.nst-accordion,
+.nlf-team .nst-tax-panel details.nst-accordion,
+.nlf-team .nst-component-eras details.nst-accordion{width:fit-content;max-width:100%;min-width:320px}
+.nlf-team .nst-component-roster>details.nst-accordion[open],
+.nlf-team .nst-tax-panel details.nst-accordion[open],
+.nlf-team .nst-component-eras details.nst-accordion[open]{width:auto;min-width:0}
+.nlf-team .nst-component-roster>details.nst-accordion>summary,
+.nlf-team .nst-tax-panel details.nst-accordion>summary,
+.nlf-team .nst-component-eras details.nst-accordion>summary{gap:28px}
+/* Four across on desktop */
+@media (min-width:1024px){
+  .nlf-team .nst-rival-grid,
+  .nlf-team .nst-threshold-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+/* Contracts & future salaries */
+.nlf-team .bde-shortcode-390-185 .nst-scroll table th:first-child,
+.nlf-team .bde-shortcode-390-185 .nst-scroll table td:first-child{padding-left:18px!important;width:1%;white-space:nowrap;padding-right:28px!important}
+.nlf-team .bde-shortcode-390-185 .nst-contract>summary{cursor:pointer;border-radius:7px;border:1px solid transparent;display:flex!important;align-items:center;gap:6px;transition:background .15s,border-color .15s,box-shadow .15s;list-style:none}
+.nlf-team .bde-shortcode-390-185 .nst-contract>summary::-webkit-details-marker{display:none}
+.nlf-team .bde-shortcode-390-185 .nst-contract>summary::after{content:"";margin-left:auto;width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.55;transition:transform .15s}
+.nlf-team .bde-shortcode-390-185 .nst-contract[open]>summary::after{transform:rotate(-135deg) translateY(-1px)}
+.nlf-team .bde-shortcode-390-185 .nst-contract>summary:hover{box-shadow:0 1px 4px rgba(15,23,42,.14);border-color:rgba(15,23,42,.18)}
+.nlf-team .bde-shortcode-390-185 .nst-contract>summary:focus-visible{outline:2px solid #17408b;outline-offset:2px}
+.nlf-team .nst-contract.nst-c-g>summary{background:#e3ecf8!important;color:#12325f!important}
+.nlf-team .nst-contract.nst-c-po>summary{background:#fdf0d8!important;color:#7a4b00!important}
+.nlf-team .nst-contract.nst-c-to>summary{background:#ece6f8!important;color:#4a2a8a!important}
+.nlf-team .nst-contract.nst-c-ng>summary{background:#f1f3f5!important;color:#475467!important;border-style:dashed!important;border-color:#c5ccd6!important}
+.nlf-team .nst-contract>summary b{font-size:10px;letter-spacing:.04em;padding:2px 5px;border-radius:4px;background:rgba(255,255,255,.7)}
+.nlf-legend{display:flex;flex-wrap:wrap;gap:8px 16px;margin:0 0 14px;padding:0;list-style:none;font-size:12px;color:#475467}
+.nlf-legend li{display:flex;align-items:center;gap:6px}
+.nlf-legend i{display:inline-block;width:14px;height:14px;border-radius:4px}
+.nlf-legend .g{background:#e3ecf8;border:1px solid #bcd0ee}
+.nlf-legend .po{background:#fdf0d8;border:1px solid #efcf8f}
+.nlf-legend .to{background:#ece6f8;border:1px solid #cdbfee}
+.nlf-legend .ng{background:#f1f3f5;border:1px dashed #c5ccd6}
+
+/* Rail column: no leftover panel behind the new sidebar */
+.nlf-dir .bde-fancy-container-14-111,.nlf-dir .bde-fancy-container-405-110{background:transparent!important;padding:0!important;border:0!important;box-shadow:none!important}
+.nsr-rail h3{text-transform:none!important;letter-spacing:normal!important}

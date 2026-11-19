@@ -1,0 +1,14 @@
+
+/* V33: clearer stint hierarchy and restrained carousel motion. */
+.nba-fin .nf-era>summary .nf-stint-tagline,.nba-fin .nf-era>summary .nf-era-team,.nba-fin .nf-era>summary .nf-era-team span{font-weight:400!important}
+.nba-fin .nf-era>summary .nf-era-years,.nba-fin .nf-era>summary .nf-range{font-weight:750!important}
+@media(min-width:1024px){.nba-fin .nf-era>summary .nf-stint-tagline,.nba-fin .nf-era>summary .nf-era-team{font-size:16px!important;line-height:1.45!important}.nba-fin .nf-era>summary .nf-era-years,.nba-fin .nf-era>summary .nf-range{font-size:18px!important}}
+.nba-fin .nf-carousel .nf-player-track{padding-left:3px!important;padding-right:3px!important;scroll-padding-inline:3px}
+@media(hover:hover) and (pointer:fine){.nba-fin .nf-carousel .nf-player-card:hover{transform:translateY(-3px)!important}}
+.nba-fin .nf-carousel .nf-carousel-controls button,.nba-fin .nf-carousel .nf-carousel-controls button:hover,.nba-fin .nf-carousel .nf-carousel-controls button:active,.nba-fin .nf-carousel .nf-carousel-controls button:disabled,.nba-fin .nf-carousel .nf-carousel-controls button:disabled:hover{background:#ededed!important;border:1px solid #d2d2d2!important;color:#343434!important;opacity:1!important;box-shadow:none!important}
+@media(max-width:1023px){
+#overview .bde-fancy-container-506-131{min-height:0!important;gap:10px!important;justify-content:flex-start!important}#overview .bde-shortcode-506-180{margin-top:0!important}#overview .bde-shortcode-506-181{margin-top:0!important}#overview .nf-identity{margin:0!important}#overview .bde-fancy-container-506-131{display:contents!important}#overview .bde-fancy-container-506-131>*{order:1!important}#overview .bde-fancy-container-506-132{order:2!important}#overview .bde-fancy-container-506-131>.nbasalarie-herojump{order:3!important;margin-top:14px!important}
+.nba-fin .nf-carousel .nf-player-card .nf-card-title{margin-bottom:10px!important}.nba-fin .nf-carousel .nf-player-card .nf-carousel-team{margin-bottom:0!important}.nba-fin .nf-carousel .nf-player-card .nf-player-pay{margin:12px 0 16px!important}
+}
+@media(max-width:767px){#nba-site-header #nba-site-logo{width:124px!important;max-width:none!important;flex:0 1 124px!important}#nba-site-header #nba-site-logo img{width:100%!important;height:auto!important}#nba-site-header .bde-button-365-108 .button-atom{padding:8px 2px!important;min-height:38px!important}#nba-site-header .nba-mobile-menu summary{padding:0 6px!important;min-width:0!important;height:38px!important}#nba-site-header .bde-fancy-container-365-103{gap:5px!important}#nba-site-header .bde-fancy-container-365-101{gap:7px!important}}
+@media(prefers-reduced-motion:reduce){.nba-fin .nf-carousel .nf-player-card:hover{transform:none!important}}

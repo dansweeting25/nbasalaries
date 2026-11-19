@@ -1,0 +1,17 @@
+
+#nba-site-header>.section-container{padding-top:20px!important;padding-bottom:0!important}
+#nba-site-header .bde-fancy-container-365-101{padding-bottom:20px!important}
+#nba-site-header #nba-team-header-row{margin-top:0!important}
+#nba-site-header:has(.nba-team-header-slot.is-collapsed)>.section-container{padding-bottom:0!important}
+#nba-site-header .bde-shortcode:has(.nba-mobile-menu){display:none;width:auto;flex-shrink:0}
+.nba-mobile-menu{position:relative}.nba-mobile-menu summary{display:grid;place-items:center;width:38px;height:38px;list-style:none;border:1px solid #d2d2d2;border-radius:6px;background:#ededed;color:#343434;cursor:pointer;font-size:23px}.nba-mobile-menu summary{padding:0!important;box-sizing:border-box;line-height:1}.nba-mobile-menu summary svg{display:block;width:20px;height:20px;margin:0;flex-shrink:0}.nba-mobile-menu summary::-webkit-details-marker{display:none}.nba-mobile-menu summary:hover{background:#d9d9d9}.nba-mobile-menu summary:focus-visible{outline:2px solid #1d428a;outline-offset:2px}.nba-mobile-menu nav{position:absolute;top:calc(100% + 12px);right:0;min-width:180px;background:white;border:1px solid #dedede;border-radius:8px;padding:8px;box-shadow:0 8px 24px #0002;z-index:20}.nba-mobile-menu nav a{display:block;padding:10px 14px;color:#182030;font-size:16px;font-weight:600;text-decoration:none;border-radius:4px}.nba-mobile-menu nav a:hover{background:#ededed}
+@media(max-width:767px){
+#nba-site-header>.section-container{padding-top:16px!important}
+#nba-site-header .bde-fancy-container-365-101{flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;padding-bottom:16px!important}
+#nba-site-header #nba-site-logo{width:120px!important;max-width:36%!important;flex-shrink:1}
+#nba-site-logo img{width:100%!important;height:auto!important}
+#nba-site-header .bde-fancy-container-365-103{width:auto!important;gap:8px!important;align-items:center!important;flex-wrap:nowrap!important}
+#nba-site-header .bde-button-365-106,#nba-site-header .bde-button-365-107{display:none!important}
+#nba-site-header .bde-shortcode:has(.nba-mobile-menu){display:block}
+#nba-site-header .bde-button-365-108 .button-atom{font-size:12px!important;white-space:nowrap;padding:10px!important}
+}
